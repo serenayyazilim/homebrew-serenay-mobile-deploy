@@ -1,6 +1,6 @@
 cask "serenay-mobile-deploy" do
-  version "0.2.0"
-  sha256 "0db88e961d7bbbe593a7d7714c7720be47c29fc30146fb997fd14b4baa4630b0"
+  version "0.2.1"
+  sha256 "f3b25e72d85206299afe72550817c91e5ecfd13eb123fb7d2c0cf4982bfc8943"
 
   url "https://github.com/serenayyazilim/serenay-mobile-deploy/releases/download/v#{version}/serenay-mobile-deploy_#{version}_aarch64.dmg"
   name "Serenay Mobile Deploy"

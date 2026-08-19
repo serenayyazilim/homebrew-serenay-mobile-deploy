@@ -1,8 +1,11 @@
 cask "serenay-mobile-deploy" do
-  version "0.2.1"
-  sha256 "f3b25e72d85206299afe72550817c91e5ecfd13eb123fb7d2c0cf4982bfc8943"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/serenayyazilim/serenay-mobile-deploy/releases/download/v#{version}/serenay-mobile-deploy_#{version}_aarch64.dmg"
+  version "0.2.3"
+  sha256 arm:   "eaa2e1a99035c3bc1611b4964fab02518cbb488ae73c1a3b62700e50414f3d88",
+         intel: "1375256dd51d0cbbfdead04342852eb9601673b63213c91a694cef689c3b613e"
+
+  url "https://github.com/serenayyazilim/serenay-mobile-deploy/releases/download/v#{version}/Serenay.Mobile.Deploy_#{version}_#{arch}.dmg"
   name "Serenay Mobile Deploy"
   desc "Flutter multi-app build and deploy tool"
   homepage "https://github.com/serenayyazilim/serenay-mobile-deploy"
@@ -12,10 +15,9 @@ cask "serenay-mobile-deploy" do
     strategy :github_latest
   end
 
-  depends_on arch: :arm64
   depends_on :macos
 
-  app "serenay-mobile-deploy.app"
+  app "Serenay Mobile Deploy.app"
 
   zap trash: [
     "~/Library/Application Support/com.serenaymobiledeploy.app",
@@ -29,7 +31,7 @@ cask "serenay-mobile-deploy" do
       will flag it as being from an unidentified developer on first launch.
 
       To open it, either right-click the app in Finder and choose "Open", or run:
-        xattr -dr com.apple.quarantine "#{appdir}/serenay-mobile-deploy.app"
+        xattr -dr com.apple.quarantine "#{appdir}/Serenay Mobile Deploy.app"
     EOS
   end
 end

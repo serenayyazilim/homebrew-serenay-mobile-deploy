@@ -1,7 +1,7 @@
 cask "serenay-mobile-deploy" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.7"
+  version "0.2.8"
   sha256 arm:   "eaa2e1a99035c3bc1611b4964fab02518cbb488ae73c1a3b62700e50414f3d88",
          intel: "1375256dd51d0cbbfdead04342852eb9601673b63213c91a694cef689c3b613e"
 

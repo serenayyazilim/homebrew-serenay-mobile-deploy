@@ -1,13 +1,13 @@
 cask "serenay-mobile-deploy" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.10"
-  sha256 arm:   "eaa2e1a99035c3bc1611b4964fab02518cbb488ae73c1a3b62700e50414f3d88",
-         intel: "1375256dd51d0cbbfdead04342852eb9601673b63213c91a694cef689c3b613e"
+  version "0.2.11"
+  sha256 arm:   "ed9c032e407728b41dd77007ed555af1c724b801e9519d110f13098c84f41a24",
+         intel: "ed02f0cf3dab62216af7e3ab0b2454801e31b4c31d2763ac36732078255a8564"
 
   url "https://github.com/serenayyazilim/serenay-mobile-deploy/releases/download/v#{version}/Serenay.Mobile.Deploy_#{version}_#{arch}.dmg"
   name "Serenay Mobile Deploy"
-  desc "Flutter multi-app build and deploy tool"
+  desc "Run and deploy Flutter, React Native, Expo and native mobile apps"
   homepage "https://github.com/serenayyazilim/serenay-mobile-deploy"
 
   livecheck do

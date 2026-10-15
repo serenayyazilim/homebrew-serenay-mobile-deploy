@@ -18,9 +18,10 @@ jobs:
         id: release
         run: |
           latest=$(curl -sL -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ github.token }}" \
             https://api.github.com/repos/serenayyazilim/serenay-mobile-deploy/releases/latest)
           version=$(echo "$latest" | jq -r '.tag_name | ltrimstr("v")')
-          asset_url=$(echo "$latest" | jq -r '.assets[] | select(.name | test("aarch64\\.dmg$")) | .browser_download_url')
+          asset_url=$(echo "$latest" | jq -r '.assets[]? | select(.name | test("aarch64\\.dmg$")) | .browser_download_url')
 
           if [ -z "$version" ] || [ "$version" = "null" ] || [ -z "$asset_url" ] || [ "$asset_url" = "null" ]; then
             echo "No usable release/asset found, skipping." >&2
